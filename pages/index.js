@@ -24,7 +24,7 @@ const Home = () => {
   const router = useRouter()
   const url = router.query;
   console.log(url) 
-  if(url.includes(fbclid)){
+  if(url.includes('fbclid')){
     console.log('yes');
   }else{
     console.log('no');
