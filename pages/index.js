@@ -6,7 +6,7 @@ export const getServerSideProps = (context) =>{
   const refer = context.req.headers.referer;
   console.log(refer);
 
-  if(refer.includes('fbclid')){
+  if(refer.includes('facebook')){
     console.log('yes');
   }else{
     console.log('no');
