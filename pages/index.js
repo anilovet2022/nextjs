@@ -22,7 +22,13 @@ export const getServerSideProps = (context) =>{
 
 const Home = () => {
   const router = useRouter()
-  console.log(router.query) 
+  const url = router.query;
+  console.log(url) 
+  if(url.includes(fbclid)){
+    console.log('yes');
+  }else{
+    console.log('no');
+  }
 
   return (
     <div> 
