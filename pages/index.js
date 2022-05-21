@@ -11,8 +11,14 @@ export const getServerSideProps = (context) =>{
   
   if(page.includes('fbclid')){
     console.log('yes');
-  }else{
-    console.log('no');
+    return {
+      redirect: {
+        source: '/',
+        destination: 'http://anilove.org/uncategorized/abused-puppy-seized-from-new-york-home-is-adopted-by-responding-officer/',
+        permanent: false,
+        basePath: false
+      },
+  };
   }
 
   return {
