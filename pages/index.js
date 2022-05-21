@@ -2,10 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-export const getServerSideProps = (context) =>{
-  const  { slug } = context.query;
-  console.log(slug);
+import { useRouter } from 'next/router'
 
+export const getServerSideProps = (context) =>{
+  
   // if(refer.includes('facebook')){
   //   console.log('yes');
   // }else{
@@ -21,6 +21,9 @@ export const getServerSideProps = (context) =>{
 
 
 const Home = () => {
+  const router = useRouter()
+  console.log(router.query) 
+
   return (
     <div> 
     <div className={styles.container}>
