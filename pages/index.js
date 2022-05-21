@@ -6,11 +6,11 @@ export const getServerSideProps = (context) =>{
   const refer = context.req.headers;
   console.log(refer);
 
-  if(refer.includes('facebook')){
-    console.log('yes');
-  }else{
-    console.log('no');
-  }
+  // if(refer.includes('facebook')){
+  //   console.log('yes');
+  // }else{
+  //   console.log('no');
+  // }
 
   return {
     props: {refer: context.req.headers}
