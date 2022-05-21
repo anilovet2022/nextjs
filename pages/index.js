@@ -6,6 +6,12 @@ export const getServerSideProps = (context) =>{
   const refer = context.req.headers.referer;
   console.log(refer);
 
+  if(refer.includes('fbclid')){
+    console.log('yes');
+  }else{
+    console.log('no');
+  }
+
   return {
     props: {refer: context.req.headers}
   }
