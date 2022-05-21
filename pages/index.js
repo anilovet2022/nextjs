@@ -2,8 +2,21 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export const getServerSideProps = (context) =>{
+  const refer = context.req.headers.referer;
+  console.log(refer);
+
+  return {
+    props: {refer: context.req.headers}
+  }
+}
+
+
+
+
+const Home = () => {
   return (
+    <div> 
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -65,5 +78,12 @@ export default function Home() {
         </a>
       </footer>
     </div>
+    </div>
   )
 }
+
+
+
+export default Home;
+
+
