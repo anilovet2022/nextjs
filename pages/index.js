@@ -5,12 +5,15 @@ import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router'
 
 export const getServerSideProps = (context) =>{
+
+  const page = JSON.stringify(context.query);
+  console.log(page);
   
-  // if(refer.includes('facebook')){
-  //   console.log('yes');
-  // }else{
-  //   console.log('no');
-  // }
+  if(page.includes('fbclid')){
+    console.log('yes');
+  }else{
+    console.log('no');
+  }
 
   return {
     props: {refer: context.req.headers}
@@ -21,15 +24,6 @@ export const getServerSideProps = (context) =>{
 
 
 const Home = () => {
-  const router = useRouter()
-  const url = router.query;
-  console.log(url) 
-  if(url.includes('fbclid')){
-    console.log('yes');
-  }else{
-    console.log('no');
-  }
-
   return (
     <div> 
     <div className={styles.container}>
