@@ -3,8 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export const getServerSideProps = (context) =>{
-  const refer = context.params;
-  console.log(refer);
+  const  { slug } = context.params;
+  console.log(slug);
 
   // if(refer.includes('facebook')){
   //   console.log('yes');
